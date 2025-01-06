@@ -9,7 +9,7 @@ WITH gradeList AS
            ELSE 'C'
           END as GRADE
     FROM HR_GRADE
-    GROUP BY EMP_NO, YEAR
+    GROUP BY EMP_NO
 )
 
 select 
