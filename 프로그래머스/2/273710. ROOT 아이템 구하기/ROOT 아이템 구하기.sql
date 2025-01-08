@@ -1,0 +1,6 @@
+SELECT
+    i.ITEM_ID,
+    i.ITEM_NAME
+FROM ITEM_INFO i
+inner join ITEM_TREE t on i.ITEM_ID = t.ITEM_ID
+WHERE t.PARENT_ITEM_ID is null
