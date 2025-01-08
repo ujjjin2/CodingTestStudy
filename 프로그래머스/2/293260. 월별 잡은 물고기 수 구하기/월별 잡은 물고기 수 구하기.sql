@@ -1,0 +1,11 @@
+SELECT 
+    count(d.FISH_TYPE) as FISH_COUNT,
+    d.MONTH
+FROM (
+    SELECT 
+        FISH_TYPE,
+        CAST(DATE_FORMAT(TIME, '%c') as UNSIGNED) as MONTH
+    FROM FISH_INFO
+) d
+GROUP BY d.MONTH
+ORDER BY d.MONTH
