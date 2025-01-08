@@ -1,0 +1,8 @@
+SELECT
+    count(*) as FISH_COUNT,
+    max(f.LENGTH) as MAX_LENGTH,
+    f.FISH_TYPE
+FROM FISH_INFO f
+GROUP BY f.FISH_TYPE
+HAVING avg(f.LENGTH) >= 33
+ORDER BY f.FISH_TYPE asc
