@@ -2,7 +2,7 @@ WITH dataList AS(
     SELECT
         fi.ID,
         CASE
-            WHEN fi.LENGTH is NULL THEN 10
+            WHEN fi.LENGTH is NULL OR fi.LENGTH<=10 THEN 10
             ELSE fi.LENGTH
         END as LENGTH,
         fi.FISH_TYPE
